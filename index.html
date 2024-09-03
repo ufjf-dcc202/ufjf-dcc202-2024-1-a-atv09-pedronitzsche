@@ -15,14 +15,24 @@
     <script>
         let maria = {
             nome : "Maria",
-            qtd: 1
+            qtd: 1,
+            come: function (){
+                maria.qtd --;
+            }
         };
         let joao = {
             nome : "Joao",
-            qtd: 2
+            qtd: 2,
+            come: function (){
+                joao.qtd --;
+            }
         };
         deMariaParaJoao();
+        maria.come();
 
+        console.log("${maria.nome} tem ${maria.qtd} maças! ")
+
+        
         function deJoaoParaMaria(){
             maria.qtd = maria.qtd + joao.qtd;
             joao.qtd = 0;
